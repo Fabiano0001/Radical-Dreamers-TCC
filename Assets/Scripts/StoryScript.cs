@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +29,6 @@ public class StoryScript : MonoBehaviour
             }
             else if (j == i -1 && !before)
             {
-                Debug.Log("a");
                 SceneManager.LoadScene("Menu");
             }
             if (j < i -1)
@@ -37,6 +37,10 @@ public class StoryScript : MonoBehaviour
                 slides[j + 1].SetActive(true);
                 j++;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && before)
+        {
+            SceneManager.LoadScene("Gameplay");
         }
     }
 }

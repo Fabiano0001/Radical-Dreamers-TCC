@@ -7,8 +7,13 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] float raioDeDeteccao = 2;
     [SerializeField] int vida = 3;
     [SerializeField] PauseMenu menu;
+    [SerializeField] UiHpController UiHpController;
     bool acertou;
-    
+
+    private void Start()
+    {
+        UiHpController.UpdateUI(vida);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A)) 
@@ -45,7 +50,7 @@ public class AreaDeColisao : MonoBehaviour
 
         if(colisoresPorPerto.Length == 0)
         {
-            vida--;
+            PerderVida();
         }
 
         foreach (Collider2D colisor in colisoresPorPerto)
@@ -57,7 +62,7 @@ public class AreaDeColisao : MonoBehaviour
             }
             if (!acertou)
             {
-                vida--;
+                PerderVida();
             }
         }
     }
@@ -65,6 +70,7 @@ public class AreaDeColisao : MonoBehaviour
     public void PerderVida()
     {
         vida--;
+        UiHpController.UpdateUI(vida);
     }
 
     private void OnDrawGizmos()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 965d1f085d64beb4284ccd1db8a72cf8
+guid: 30525872857a4b040996e5ef030ad5cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7309946923906021446
-    second: Fundo_Microscopio_Betinha_Ribossomo_0
+      213: -5902810164584171243
+    second: Painel_Historia05_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fundo_Microscopio_Betinha_Ribossomo_0
+      name: Painel_Historia05_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab74f91a00add8a90800000000000000
-      internalID: -7309946923906021446
+      spriteID: 51935630e61051ea0800000000000000
+      internalID: -5902810164584171243
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fundo_Microscopio_Betinha_Ribossomo_0: -7309946923906021446
+      Painel_Historia05_0: -5902810164584171243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

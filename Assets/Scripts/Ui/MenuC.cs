@@ -8,6 +8,7 @@ public class Menuc : MonoBehaviour
     [SerializeField] GameObject telaMenu;
     [SerializeField] GameObject telaOpcoes;
     [SerializeField] GameObject telaCreditos;
+    //[SerializeField] AudioClip somBotao;
 
 
     
@@ -44,12 +45,14 @@ public class Menuc : MonoBehaviour
     {
         HideUI();
         telaOpcoes.SetActive(true);
+        PlayButtonSound();
     }
 
     public void Btn_Creditos()
     {
         HideUI();
         telaCreditos.SetActive(true);
+        PlayButtonSound();
     }
 
     public void Btn_Sair()
@@ -61,5 +64,12 @@ public class Menuc : MonoBehaviour
     {
         HideUI();
         telaMenu.SetActive(true);
+        PlayButtonSound();
+    }
+
+    public void PlayButtonSound()
+    {
+        //AudioSource.PlayClipAtPoint(somBotao,this.transform.position);
+        GetComponent<AudioSource>().Play();
     }
 }

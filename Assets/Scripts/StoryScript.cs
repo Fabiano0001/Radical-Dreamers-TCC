@@ -36,6 +36,7 @@ public class StoryScript : MonoBehaviour
                 slides[j].SetActive(false);
                 slides[j + 1].SetActive(true);
                 j++;
+                GetComponent<AudioSource>().Play();
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape) && before)

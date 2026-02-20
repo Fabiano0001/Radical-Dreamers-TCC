@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3cd251cbe6d554dbb217f0ad8fe890, type: 3}
+  m_Name: fase 1 pre
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -6571920087145399631, guid: 9123a77ec6cc25e4da6d498b9dccbc09, type: 3}
+  - {fileID: -822263422050718834, guid: 92648c5a7893cde43ae1e80bdff56340, type: 3}
+  - {fileID: 1851332511821127241, guid: b9cbbbeb3e2fe0243be4a8f87979917d, type: 3}
+  - {fileID: -3274983221604973260, guid: 16f15d70aef2ed44cb09b8ee243ffec6, type: 3}
+  slides:
+  - {fileID: 0}
+  testsa: 3

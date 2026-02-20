@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: tecla
       value: 102
       objectReference: {fileID: 0}
+    - target: {fileID: 6784544240980892112, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
+      propertyPath: duracao
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7473746810431074316, guid: f4fad1653c69c784dbc12ef75ed76253, type: 3}
       propertyPath: m_Layer
       value: 8

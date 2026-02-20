@@ -20,7 +20,6 @@ public class RiboTubo : MonoBehaviour
     {
         if (input == tecla)
         {
-            Debug.Log("tecla correta");
             hit = true;
             //Destroy(gameObject);
             this.GetComponentInChildren<SpriteRenderer>().enabled = false;

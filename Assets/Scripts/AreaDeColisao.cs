@@ -8,7 +8,12 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] int vida = 3;
     [SerializeField] PauseMenu menu;
     [SerializeField] UiHpController UiHpController;
+    [SerializeField] ScoreCounter score;
+    [SerializeField] int amountToAddOnGreat = 3;
+    [SerializeField] int amountToAddOnGood = 2;
+    [SerializeField] int amountToAddOnBad = 1;
     bool acertou;
+    float distance;
 
     private void Start()
     {
@@ -60,9 +65,26 @@ public class AreaDeColisao : MonoBehaviour
             {
                 acertou = colisor.gameObject.GetComponentInParent<RiboTubo>().VerificarImput(input);
             }
-            if (!acertou)
+            if (acertou)
+            {
+                distance = Vector3.Distance(this.gameObject.transform.position, colisor.gameObject.transform.position);
+                if(distance < 0.25)
+                {
+                    score.AddScore(amountToAddOnGreat);
+                }
+                else if(distance < 0.5)
+                {
+                    score.AddScore(amountToAddOnGood);
+                }
+                else
+                {
+                    score.AddScore(amountToAddOnBad);
+                }
+            }
+            else
             {
                 PerderVida();
+                score.MissedTheBonus();
             }
         }
     }

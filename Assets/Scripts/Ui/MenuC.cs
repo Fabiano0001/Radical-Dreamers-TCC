@@ -38,6 +38,7 @@ public class Menuc : MonoBehaviour
 
     public void Btn_Comeco()
     {
+        SlidesManeger.instance.UpdateSlidesToShow(0);
         SceneManager.LoadScene("Story");
     }
 

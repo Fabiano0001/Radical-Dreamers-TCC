@@ -1904,7 +1904,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   raioDeDeteccao: 0.24
-  vida: 7
+  vida: 3
   menu: {fileID: 2052847788}
   UiHpController: {fileID: 907452688}
   score: {fileID: 862006135}

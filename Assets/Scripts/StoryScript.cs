@@ -89,6 +89,10 @@ public class StoryScript : MonoBehaviour
                 ChangeScene();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ChangeScene();
+        }
     }
 
     private void ChangeScene()

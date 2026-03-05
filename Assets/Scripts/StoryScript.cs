@@ -79,15 +79,7 @@ public class StoryScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            j++;
-            if (j < i)
-            {                
-                imagem.sprite = thisSlide.sprites[j];
-            }
-            if (j == i)
-            {
-                ChangeScene();
-            }
+            NextSlide();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -95,7 +87,19 @@ public class StoryScript : MonoBehaviour
         }
     }
 
-    private void ChangeScene()
+    public void NextSlide()
+    {
+        j++;
+        if (j < i)
+        {
+            imagem.sprite = thisSlide.sprites[j];
+        }
+        if (j == i)
+        {
+            ChangeScene();
+        }
+    }
+    public void ChangeScene()
     {
         if (SlideToShow % 2 != 0)
         {

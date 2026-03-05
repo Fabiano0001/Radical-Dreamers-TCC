@@ -24,30 +24,46 @@ public class AreaDeColisao : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A)) 
         {
             VerificarArea(KeyCode.A);
-
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             VerificarArea(KeyCode.S);
-
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             VerificarArea(KeyCode.D);
-
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
             VerificarArea(KeyCode.F);
-
         }
         if(vida <= 0)
         {
             menu.Perdeu();
         }
+    }
+
+    public void BotaoA()
+    {
+        VerificarArea(KeyCode.A);
+    }
+
+    public void BotaoS()
+    {
+        VerificarArea(KeyCode.S);
+    }
+
+    public void BotaoD()
+    {
+        VerificarArea(KeyCode.D);
+    }
+
+    public void BotaoF()
+    {
+        VerificarArea(KeyCode.F);
     }
     void VerificarArea(KeyCode input)
     {       

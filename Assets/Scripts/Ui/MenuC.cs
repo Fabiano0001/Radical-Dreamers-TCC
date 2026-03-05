@@ -31,11 +31,14 @@ public class Menuc : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            HideUI();
-            telaMenu.SetActive(true);
+            Btn_Iniciar();
         }
     }
-
+    public void Btn_Iniciar()
+    {
+        HideUI();
+        telaMenu.SetActive(true);
+    }
     public void Btn_Comeco()
     {
         SlidesManeger.instance.UpdateSlidesToShow(0);

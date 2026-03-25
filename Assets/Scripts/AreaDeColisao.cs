@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class AreaDeColisao : MonoBehaviour
 {
@@ -12,12 +13,18 @@ public class AreaDeColisao : MonoBehaviour
     [SerializeField] int amountToAddOnGreat = 3;
     [SerializeField] int amountToAddOnGood = 2;
     [SerializeField] int amountToAddOnBad = 1;
+    [SerializeField] ParticleSystem particlePerfect;
+    [SerializeField] ParticleSystem particleGood;
+    [SerializeField] ParticleSystem particleBad;
     bool acertou;
     float distance;
+    FMODUnity.StudioEventEmitter emitter;
 
     private void Start()
     {
         UiHpController.UpdateUI(vida);
+        var target = GameObject.Find("Music starter");
+        emitter = target.GetComponent<FMODUnity.StudioEventEmitter>();
     }
     void Update()
     {
@@ -87,20 +94,25 @@ public class AreaDeColisao : MonoBehaviour
                 if(distance < 0.25)
                 {
                     score.AddScore(amountToAddOnGreat);
+                    Instantiate(particlePerfect, colisor.gameObject.transform);
                 }
                 else if(distance < 0.5)
                 {
                     score.AddScore(amountToAddOnGood);
+                    Instantiate(particleGood, colisor.gameObject.transform);
                 }
                 else
                 {
                     score.AddScore(amountToAddOnBad);
+                    Instantiate(particleBad, colisor.gameObject.transform);
                 }
+                emitter.SetParameter("On_Off", 1);
             }
             else
             {
                 PerderVida();
                 score.MissedTheBonus();
+                emitter.SetParameter("On_Off", 0);
             }
         }
     }

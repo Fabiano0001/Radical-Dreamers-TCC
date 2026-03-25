@@ -36,7 +36,7 @@ public class ScoreCounter : MonoBehaviour
         }
         hitsInARow++;
         scoreText.text = "Pontuação : " + score;
-        ScoreManeger.instance.UpdateScore(score, level);
+        //ScoreManeger.instance.UpdateScore(score, level);
     }
 
     public void MissedTheBonus()

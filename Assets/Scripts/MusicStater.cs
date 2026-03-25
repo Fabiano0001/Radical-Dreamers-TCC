@@ -11,7 +11,8 @@ public class MusicStater : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        AudioSource.Play();
+        //AudioSource.Play();
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
         Destroy(Collider);
     } 
 }

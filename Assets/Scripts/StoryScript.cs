@@ -109,7 +109,7 @@ public class StoryScript : MonoBehaviour
         {
             case 0:
                 SlidesManeger.instance.UpdateSlidesToShow(SlideToShow + 1);
-                SceneManager.LoadScene("Gameplay");
+                SceneManager.LoadScene("Gameplay 1");
                 break;
         }
     }

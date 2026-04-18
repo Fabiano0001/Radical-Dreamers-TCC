@@ -112,13 +112,14 @@ public class AreaDeColisao : MonoBehaviour
             {
                 PerderVida();
                 score.MissedTheBonus();
-                emitter.SetParameter("On_Off", 0);
+                //emitter.SetParameter("On_Off", 0);
             }
         }
     }
 
     public void PerderVida()
     {
+        emitter.SetParameter("On_Off", 0);
         vida--;
         UiHpController.UpdateUI(vida);
     }

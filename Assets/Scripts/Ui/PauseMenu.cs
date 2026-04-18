@@ -9,10 +9,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenuUi;
     [SerializeField] GameObject LooseScreen;
     public static bool gameIsPaused = false;
+    FMODUnity.StudioEventEmitter emitter;
 
     private void Start()
     {
         Btn_Resume();
+        var target = GameObject.Find("Music starter");
+        emitter = target.GetComponent<FMODUnity.StudioEventEmitter>();
     }
     void Update()
     {
@@ -55,6 +58,19 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void Btn_Acelerar()
+    {
+        Time.timeScale = 4.0f;
+        emitter.SetParameter("Speed_Up", 4);
+    }
+
+    public void Btn_VelocidadeNormal()
+    {
+        Time.timeScale = 1.0f;
+        emitter.SetParameter("Speed_Up", 1);
+    }
+
     public void Btn_exit()
     {
         Application.Quit();
